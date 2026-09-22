@@ -1,0 +1,271 @@
+# =========================
+# ENV / SECRETS
+# =========================
+
+.env
+.env.*
+!.env.example
+
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+
+# =========================
+# PYTHON / FASTAPI
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.so
+
+.Python
+
+venv/
+.venv/
+env/
+ENV/
+
+backend/venv/
+backend/.venv/
+
+pip-log.txt
+pip-delete-this-directory.txt
+
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+.mypy_cache/
+.pyright/
+.ruff_cache/
+
+*.egg
+*.egg-info/
+dist/
+build/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+
+MANIFEST
+
+instance/
+
+*.log
+
+
+# =========================
+# DATABASES
+# =========================
+
+*.db
+*.sqlite
+*.sqlite3
+
+backend/*.db
+backend/*.sqlite
+backend/*.sqlite3
+
+
+# =========================
+# ALEMBIC
+# =========================
+
+# NÃO ignore a pasta alembic/
+# As migrations devem ir para o Git.
+
+# Exemplo:
+# backend/alembic/
+# backend/alembic.ini
+
+
+# =========================
+# NODE / REACT / TYPESCRIPT
+# =========================
+
+node_modules/
+
+frontend/node_modules/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+.pnpm-store/
+
+dist/
+frontend/dist/
+
+build/
+frontend/build/
+
+.cache/
+.parcel-cache/
+
+*.tsbuildinfo
+
+
+# =========================
+# VITE
+# =========================
+
+.vite/
+frontend/.vite/
+
+
+# =========================
+# NEXT.JS
+# Caso use futuramente
+# =========================
+
+.next/
+out/
+
+
+# =========================
+# TESTES FRONTEND
+# =========================
+
+coverage/
+frontend/coverage/
+
+playwright-report/
+test-results/
+
+frontend/playwright-report/
+frontend/test-results/
+
+
+# =========================
+# IDEs / EDITORES
+# =========================
+
+.vscode/
+.idea/
+
+*.sublime-project
+*.sublime-workspace
+
+
+# =========================
+# SISTEMA OPERACIONAL
+# =========================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.directory
+
+
+# =========================
+# TEMPORÁRIOS
+# =========================
+
+*.tmp
+*.temp
+*.swp
+*.swo
+
+tmp/
+temp/
+
+
+# =========================
+# LOGS
+# =========================
+
+logs/
+*.log
+
+
+# =========================
+# DOCKER
+# =========================
+
+.dockerignore
+
+# Não ignore Dockerfile ou docker-compose.yml
+
+
+# =========================
+# CERTIFICADOS / CHAVES
+# =========================
+
+*.pem
+*.key
+*.crt
+
+private/
+secrets/
+
+
+# =========================
+# UPLOADS LOCAIS
+# =========================
+
+uploads/
+
+backend/uploads/
+
+# Se uploads fizerem parte fixa do projeto,
+# remova essas linhas.
+
+
+# =========================
+# ARQUIVOS GERADOS
+# =========================
+
+generated/
+
+*.bak
+*.old
+
+
+# =========================
+# JUPYTER
+# =========================
+
+.ipynb_checkpoints/
+
+
+# =========================
+# PYTHON LOCAL SETTINGS
+# =========================
+
+.python-version
+
+
+# =========================
+# EDITOR / AI TOOLS
+# Opcional
+# =========================
+
+.cursor/
