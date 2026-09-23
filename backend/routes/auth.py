@@ -7,7 +7,8 @@ from typing import Annotated
 
 
 
-router = APIRouter(prefix='/auth')
+router = APIRouter(prefix='/auth',
+                   tags=['AUTH'])
 
 
 

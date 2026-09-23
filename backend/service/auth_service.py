@@ -1,5 +1,6 @@
 from sqlmodel import Session, select
 from schemas.auth import UserCreate, UserPublic
+from schemas.bet import BetCreate
 from db.models.auth import User
 from core.core import verify_senha_hash, create_senha_hash, DUMMY_HASH
 import jwt
@@ -38,3 +39,12 @@ def create_acess_token(data: dict):
     to_encoded = data.copy()
     encoded_jwt = jwt.encode(to_encoded, settings.SECRET_KEY, algorithm=settings.ALGORITHM)
     return encoded_jwt
+
+
+def atualizar_user(bet: BetCreate, session: Session) -> UserPublic:
+    try:
+        user: UserPublic = session.exec(select(User).where(User.id == bet.id_user))
+        user.saldo = user.saldo - bet.valor
+        return user
+    except Exception:
+        raise Exception('Não foi possível atualizar usuário.')

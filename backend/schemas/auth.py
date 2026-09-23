@@ -8,4 +8,5 @@ class UserCreate(BaseUser):
     senha: str
 
 class UserPublic(BaseUser):
-    _id: int
+    id: int
+    saldo: float
