@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 class BaseGame(SQLModel):
-    data_encerramento: datetime
+    pass
 
 
 class GameCreate(BaseGame):

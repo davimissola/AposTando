@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Depends
 from schemas.game import GameCreate, GamePublic
 from dependencies import SessionDep, get_current_user
-from service.game_service import create_game_db, views_games_abertos_db
+from service.game_service import create_game_db, views_games_abertos_db, start_game_db
 
 
 
@@ -25,3 +25,8 @@ def create_game(game: GameCreate, session: SessionDep) -> GamePublic:
 def views_games_abertos(session: SessionDep) -> list[GamePublic]:
     games_abertos = views_games_abertos_db(session)
     return games_abertos
+
+
+@router.get('/start/{id_game}', dependencies=[Depends(get_current_user)])
+def start_game(id_game: int, session: SessionDep):
+    pass

@@ -43,7 +43,9 @@ def create_acess_token(data: dict):
 
 def atualizar_user(bet: BetCreate, session: Session) -> UserPublic:
     try:
-        user: UserPublic = session.exec(select(User).where(User.id == bet.id_user))
+        user: UserPublic = session.exec(select(User).where(User.id == bet.id_user)).first()
+        if not user.saldo > bet.valor:
+            raise Exception('Saldo do usuário indisponível.')
         user.saldo = user.saldo - bet.valor
         return user
     except Exception:

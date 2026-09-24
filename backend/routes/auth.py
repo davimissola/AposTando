@@ -27,7 +27,6 @@ async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()], sess
             'token_type': 'bearer'
             }
 
-
 @router.post('/create')
 async def create(user: UserCreate, session: SessionDep) -> UserPublic:
     user_db = create_user(user, session)

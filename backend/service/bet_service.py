@@ -13,8 +13,8 @@ def create_bet_db(bet: BetCreate, id_user: int, session: Session) -> BetPublic:
                                 update={'id_user': id_user}
                                 )
     try:
-        atualizar_game(bet, session)
-        atualizar_user(bet, session)
+        atualizar_game(bet_db, session)
+        atualizar_user(bet_db, session)
     except Exception as error:
         raise Exception(error)
 
