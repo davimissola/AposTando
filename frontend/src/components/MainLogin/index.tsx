@@ -4,6 +4,8 @@ import './main-login.css'
 
 export function MainLogin() {
     const navigate = useNavigate()
+
+    // REVISAR ESSA FUNÇÃO 200 VEZES
     async function onLoginAccount(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
         const formData = new FormData(e.currentTarget)
