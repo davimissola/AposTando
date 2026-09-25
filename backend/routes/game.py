@@ -28,5 +28,9 @@ def views_games_abertos(session: SessionDep) -> list[GamePublic]:
 
 
 @router.get('/start/{id_game}', dependencies=[Depends(get_current_user)])
-def start_game(id_game: int, session: SessionDep):
-    pass
+def start_game(id_game: int, session: SessionDep) -> dict:
+    try:
+        vencedor: str = start_game_db(id_game, session)
+        return {'VENCEDOR ': vencedor}
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))

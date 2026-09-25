@@ -1,0 +1,49 @@
+.class-main-home {
+    background-image: url('../../assets/background-praia.png');
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+}
+
+.div-text-main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-text-main h1 {
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 109px;
+    letter-spacing: -0.07em;
+    color: var(--branco);
+}
+
+.div-text-main div {
+    display: flex;
+    gap: 30px;
+}
+
+.div-text-main div a {
+    text-decoration: none;
+    color: var(--branco);
+    background-color: var(--verde-principal);
+    font-size: 14px;
+    padding: 8px 30px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: -0.07em;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.div-text-main div a:hover {
+    background-color: var(--verde-hover);
+}

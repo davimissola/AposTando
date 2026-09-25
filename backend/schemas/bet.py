@@ -18,4 +18,4 @@ class BetCreate(BaseBet):
 
 
 class BetPublic(BaseBet):
-    pass
+    id_user: int

@@ -1,0 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter';
+}
+
+:root {
+    --verde-principal: #848E76;
+    --verde-escuro: #737E64;
+    --verde-claro: #939e83;
+    --verde-hover: #7d8670;
+    --branco: #fff;
+    --cinza-50: #e7e6e6;
+    --cinza-100: #CDCDCD;
+}

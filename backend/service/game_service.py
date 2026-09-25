@@ -1,10 +1,15 @@
 from schemas.game import GameCreate, GamePublic
 from schemas.bet import BetCreate, BetPublic
+from schemas.auth import UserPublic
 from sqlmodel import Session, select
 from db.models.game import Game
 from db.models.bet import Bet
+from db.models.auth import User
+import random
 
 
+
+OPCAO_BET = ('blue', 'red')
 
 
 def create_game_db(game: GameCreate, session: Session) -> GamePublic:
@@ -54,12 +59,18 @@ def start_game_db(id_game: int, session: Session):
         raise Exception('Jogo não está aberto.')
 
     # sortear entre BLUE or RED
-    vencedor = 'BLUE'
+    indice_vencedor = random.randint(0, 1)
+    vencedor = OPCAO_BET[indice_vencedor]
     try:
-        # dar dinheiro pra ta nessa lista BETS
-        bets: BetPublic = session.exec(select(Bet).where(Bet.id_game == id_game, Bet.opcao_escolhida == vencedor)).all()
-    except:
-        pass
+        game.aberto = False
+        bets: list[Bet] | None = session.exec(select(Bet).where(Bet.id_game == id_game, Bet.opcao_escolhida == vencedor)).all()
+        for bet in bets:
+            user: User = session.exec(select(User).where(User.id == bet.id_user)).first()
+            user.saldo = user.saldo + (bet.valor * 2)
+            session.commit()
+        return vencedor
+    except Exception as e:
+        raise Exception(e)
     
 
     

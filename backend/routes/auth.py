@@ -29,6 +29,7 @@ async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()], sess
 
 @router.post('/create')
 async def create(user: UserCreate, session: SessionDep) -> UserPublic:
+    print('chegou')
     user_db = create_user(user, session)
     
     if not user_db:

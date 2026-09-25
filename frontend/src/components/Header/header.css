@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    height: 100px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header a {
+    text-decoration: none;
+    color: var(--cinza-100);
+    transition: all 0.3s ease;
+}
+
+.header a:hover {
+    color: var(--cinza-50);
+}
