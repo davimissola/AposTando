@@ -1,9 +1,12 @@
 .section-create {
     display: flex;
     height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
     justify-content: center;
     align-items: center;
-    background-color: var(--verde-principal);
+    background-image: url('../../assets/background-praia.png');
 }
 
 .section-create form {

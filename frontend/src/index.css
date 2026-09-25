@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Inter';
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -12,6 +13,7 @@
     --branco: #fff;
     --cinza-50: #e7e6e6;
     --cinza-100: #CDCDCD;
+    --cinza-150: #c0bebe;
     --cinza-900: #161616;
     --cinza-800: #202020;
     --cinza-850: #1b1b1b;

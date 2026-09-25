@@ -54,7 +54,7 @@
 }
 
 .section-login form button {
-    margin: 50px 0 60px;
+    margin: 50px 0 0;
     border: none;
     background-color: var(--cinza-800);
     color: white;
@@ -68,4 +68,19 @@
 
 .section-login form button:hover {
     background-color: var(--cinza-850);
+}
+
+.section-login form span {
+    font-size: 13px;
+    color: var(--cinza-150);
+    margin: 0 auto 60px;
+}
+
+.section-login form span a {
+    color: var(--cinza-50);
+    transition: all 0.3s ease;
+}
+
+.section-login form span a:hover {
+    color: white;
 }

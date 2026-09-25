@@ -1,17 +1,20 @@
 import { useNavigate } from 'react-router-dom'
 import './main-login.css'
+import type { LoginResponse } from '../../types'
 
 
 export function MainLogin() {
     const navigate = useNavigate()
 
-    // REVISAR ESSA FUNÇÃO 200 VEZES
     async function onLoginAccount(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
         const formData = new FormData(e.currentTarget)
 
-        const username = String(formData.get('name'))
-        const password = String(formData.get('pwd'))
+        const username = formData.get('name')
+        const password = formData.get('pwd')
+        if (typeof username !== 'string' || typeof password !== 'string') {
+            return
+        }
         const body = new URLSearchParams({
             username: username,
             password: password,
@@ -26,7 +29,7 @@ export function MainLogin() {
             // login espera TEXTO no lugar de um JSON ( OAuth2PasswordRequestForm do fastapi.security exige )
             body: body
         })
-        const dados = await response.json()
+        const dados: LoginResponse = await response.json()
 
         if (!response.ok) {
             return
@@ -47,6 +50,7 @@ export function MainLogin() {
                     <input type='password' id='pwd' name='pwd' placeholder='Password' required />
                 </div>
                 <button>Logar na Conta</button>
+                <span>Não tem conta ainda? <a href="/auth/create">Crie uma</a></span>
             </form>
         </section>
     )

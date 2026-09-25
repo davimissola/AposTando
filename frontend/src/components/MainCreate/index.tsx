@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import './main-create.css'
+import type { UserPublic, ApiError } from '../../types'
 
 
 export function MainCreate() {
@@ -11,6 +12,13 @@ export function MainCreate() {
 
         const username: FormDataEntryValue | null = formData.get('name')
         const password: FormDataEntryValue | null = formData.get('pwd')
+        const confirmar_password: FormDataEntryValue | null = formData.get('con-pwd')
+
+        if (password != confirmar_password) {
+            alert('Senhas diferentes.')
+            e.currentTarget.reset()
+            return
+        }
         
         const response = await fetch('http://127.0.0.1:8000/auth/create', {
             method: 'POST',
@@ -25,9 +33,12 @@ export function MainCreate() {
         const dados = await response.json()
         
         if (!response.ok) {
-            console.log(dados.detail)
+            const error = dados as ApiError
+            console.log(error.detail)
             return
         }
+        const user = dados as UserPublic
+        console.log(user)
 
         navigate('/auth/login')
     }
@@ -42,6 +53,10 @@ export function MainCreate() {
                 <div className='div-campo-form'>
                     <label htmlFor="pwd">Senha :</label>
                     <input type='password' id='pwd' name='pwd' placeholder='Password' required />
+                </div>
+                <div className='div-campo-form'>
+                    <label htmlFor="con-pwd">Confirmar senha :</label>
+                    <input type='password' id='con-pwd' name='con-pwd' placeholder='Password' required />
                 </div>
                 <button>Criar Conta</button>
             </form>

@@ -1,3 +1,26 @@
 .section-views-games {
     background-color: var(--verde-principal);
+    padding: 120px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.a-jogo {
+    text-decoration: none;
+    color: white;
+}
+
+.a-jogo div {
+    display: flex;
+    align-items: end;
+    max-width: 95%;
+    width: 1026px;
+    height: 548px;
+    margin: 0 auto;
+    background-image: url('../../assets/jogo-padrao.png');
+}
+
+.a-jogo div h2 {
+    font-size: 4rem;
+    padding: 15px 15px;
 }
