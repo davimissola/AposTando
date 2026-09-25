@@ -10,6 +10,8 @@ from config import settings
 
 
 def create_user(user: UserCreate, session: Session) -> User:
+    if session.exec(select(User).where(User.nome == user.nome)).first():
+        raise
     senha_hash = create_senha_hash(user.senha)
     user_db = User.model_validate(user, update={'senha': senha_hash})
 

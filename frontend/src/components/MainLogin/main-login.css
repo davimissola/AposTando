@@ -1,12 +1,15 @@
-.section-create {
+.section-login {
     display: flex;
     height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
     justify-content: center;
     align-items: center;
-    background-color: var(--verde-principal);
+    background-image: url('../../assets/background-praia.png');
 }
 
-.section-create form {
+.section-login form {
     padding: 0 30px;
     display: flex;
     flex-direction: column;
@@ -14,11 +17,11 @@
     max-width: 90%;
     gap: 20px;
     border-radius: 20px;
-    background-color: var(--verde-escuro);
+    background-color: var(--cinza-900);
 }
 
-.section-create form h2 {
-    color: var(--branco);
+.section-login form h2 {
+    color: var(--cinza-50);
     text-align: center;
     padding: 60px 0 30px;
 }
@@ -35,12 +38,12 @@
     padding-bottom: 3px;
 }
 
-.div-campo-form input {
+.section-login form .div-campo-form input {
     height: 40px;
     width: 100%;
     border: none;
     border-radius: 100px;
-    background-color: var(--verde-claro);
+    background-color: var(--cinza-800);
     padding-left: 20px;
     color: white;
 }
@@ -50,10 +53,10 @@
     font-size: 12px;
 }
 
-.section-create form button {
+.section-login form button {
     margin: 50px 0 60px;
     border: none;
-    background-color: var(--verde-claro);
+    background-color: var(--cinza-800);
     color: white;
     font-size: 15px;
     letter-spacing: 0.5px;
@@ -63,6 +66,6 @@
     transition: all 0.3s ease;
 }
 
-.section-create form button:hover {
-    background-color: var(--verde-principal);
+.section-login form button:hover {
+    background-color: var(--cinza-850);
 }

@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom'
 import './main-create.css'
 
 
 export function MainCreate() {
+    const navigate = useNavigate()
+
     async function onCreateAccount(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
         const formData = new FormData(e.currentTarget)
@@ -20,7 +23,13 @@ export function MainCreate() {
             })
         })
         const dados = await response.json()
-        console.log(dados)
+        
+        if (!response.ok) {
+            console.log(dados.detail)
+            return
+        }
+
+        navigate('/auth/login')
     }
     return (
         <section className='section-create'>

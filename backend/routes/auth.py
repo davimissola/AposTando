@@ -29,8 +29,10 @@ async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()], sess
 
 @router.post('/create')
 async def create(user: UserCreate, session: SessionDep) -> UserPublic:
-    print('chegou')
-    user_db = create_user(user, session)
+    try:
+        user_db = create_user(user, session)
+    except:
+        raise HTTPException(status_code=400, detail='Erro ao criar usuário.')
     
     if not user_db:
         raise HTTPException(
