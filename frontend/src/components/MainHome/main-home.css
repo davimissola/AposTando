@@ -47,3 +47,25 @@
 .div-text-main div a:hover {
     background-color: var(--verde-hover);
 }
+
+.div-text-main div button {
+    text-decoration: none;
+    color: var(--branco);
+    background-color: var(--verde-principal);
+    font-size: 14px;
+    padding: 8px 30px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: -0.07em;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.div-text-main div button:hover {
+    background-color: var(--verde-hover);
+}

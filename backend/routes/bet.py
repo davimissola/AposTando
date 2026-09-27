@@ -23,3 +23,8 @@ def create_bet(bet: BetCreate, current_user: Annotated[UserPublic, Depends(get_c
                             detail=str(error))
 
     return bet_db
+
+
+@router.get('/', dependencies=[Depends(get_current_user)])
+def bet(current_user: Annotated[UserPublic, Depends(get_current_user)]) -> UserPublic:
+    return current_user

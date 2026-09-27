@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './main-login.css'
 import type { LoginResponse } from '../../types'
 
@@ -50,7 +50,7 @@ export function MainLogin() {
                     <input type='password' id='pwd' name='pwd' placeholder='Password' required />
                 </div>
                 <button>Logar na Conta</button>
-                <span>Não tem conta ainda? <a href="/auth/create">Crie uma</a></span>
+                <span>Não tem conta ainda? <Link to="/auth/create">Crie uma</Link></span>
             </form>
         </section>
     )

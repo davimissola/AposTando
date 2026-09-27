@@ -1,0 +1,114 @@
+.dialog-aposta::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-aposta {
+    margin: auto;
+    padding-top: 30px;
+    width: 500px;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: var(--cinza-900);
+    border-radius: 20px;
+}
+
+.header-dialog {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20% 30px;
+}
+
+.header-dialog span {
+    display: flex;
+    gap: 5px;
+}
+
+.header-dialog img {
+    width: 25px;
+    height: 22px;
+    border-radius: 200px;
+}
+
+.header-dialog h3 {
+    color: var(--cinza-150);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.header-dialog h4 {
+    color: var(--cinza-600);
+    font-size: 15px;
+}
+
+.h4-radio {
+    color: var(--cinza-50);
+    font-weight: 400;
+    font-size: 14px;
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+
+.input-opcao {
+    display: none;
+}
+
+.label-opcao {
+    background-color: var(--cinza-800);
+    padding: 12px 85px;
+    color: var(--cinza-50);
+    font-size: 14px;
+}
+
+.label-blue {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.label-red {
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.input-opcao:checked + .label-blue {
+    background-color: var(--azul-principal);
+}
+
+.input-opcao:checked + .label-red {
+    background-color: var(--vermelho-principal);
+}
+
+.h4-input {
+    color: var(--cinza-50);
+    font-weight: 400;
+    font-size: 14px;
+    padding-top: 50px;
+    padding-bottom: 5px;
+}
+
+.input-valor {
+    height: 50px;
+    width: 82%;
+    padding-left: 20px;
+    border-radius: 100px;
+    border: none;
+    background-color: var(--cinza-800);
+    color: var(--cinza-150);
+}
+
+.dialog-aposta form button {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    width: 82%;
+    height: 50px;
+    border-radius: 100px;
+    border: none;
+    background-color: var(--cinza-800);
+    color: var(--cinza-150);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.dialog-aposta form button:hover {
+    background-color: var(--cinza-850);
+}

@@ -17,13 +17,29 @@ export type ApiError = {
 
 
 export type GamePublic = {
+    id: number
     aberto: boolean
     total: number
     total_red: number
     total_blue: number
 }
 
+export type BetPublic = {
+    id_game: number
+    valor: number
+    opcao_escolhida: 'red' | 'blue'
+}
+
+export type VencedorResponse = {
+    VENCEDOR: string
+}
+
+
 
 export type PropsViewsGame = {
     GamesOpen: GamePublic[]
+}
+
+export type PropsDialogAposta = {
+    currentUser: UserPublic | null
 }

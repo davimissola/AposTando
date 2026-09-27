@@ -61,13 +61,17 @@ def start_game_db(id_game: int, session: Session):
     # sortear entre BLUE or RED
     indice_vencedor = random.randint(0, 1)
     vencedor = OPCAO_BET[indice_vencedor]
+    # TESTE
+    vencedor = 'blue'
     try:
+        print(game.aberto)
         game.aberto = False
         bets: list[Bet] | None = session.exec(select(Bet).where(Bet.id_game == id_game, Bet.opcao_escolhida == vencedor)).all()
         for bet in bets:
             user: User = session.exec(select(User).where(User.id == bet.id_user)).first()
             user.saldo = user.saldo + (bet.valor * 2)
-            session.commit()
+            
+        session.commit()
         return vencedor
     except Exception as e:
         raise Exception(e)

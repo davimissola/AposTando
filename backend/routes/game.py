@@ -31,6 +31,6 @@ def views_games_abertos(session: SessionDep) -> list[GamePublic]:
 def start_game(id_game: int, session: SessionDep) -> dict:
     try:
         vencedor: str = start_game_db(id_game, session)
-        return {'VENCEDOR ': vencedor}
+        return {'VENCEDOR' : vencedor}
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))

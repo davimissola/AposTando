@@ -4,6 +4,7 @@ import { MainHome } from "../../components/MainHome";
 import { ViewsGames } from "../../components/ViewsGames";
 import { useNavigate } from "react-router-dom";
 import type { GamePublic } from '../../types'
+import { Footer } from "../../components/Footer";
 
 
 export function Home() {
@@ -35,6 +36,7 @@ export function Home() {
             <Header />
             <MainHome />
             <ViewsGames GamesOpen={GamesOpen}/>
+            <Footer />
         </>
     )
 }

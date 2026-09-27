@@ -17,11 +17,11 @@
     max-width: 90%;
     gap: 20px;
     border-radius: 20px;
-    background-color: var(--verde-escuro);
+    background-color: var(--cinza-900);
 }
 
 .section-create form h2 {
-    color: var(--branco);
+    color: var(--cinza-50);
     text-align: center;
     padding: 60px 0 30px;
 }
@@ -43,7 +43,7 @@
     width: 100%;
     border: none;
     border-radius: 100px;
-    background-color: var(--verde-claro);
+    background-color: var(--cinza-800);
     padding-left: 20px;
     color: white;
 }
@@ -54,9 +54,9 @@
 }
 
 .section-create form button {
-    margin: 50px 0 60px;
+    margin: 50px 0 0px;
     border: none;
-    background-color: var(--verde-claro);
+    background-color: var(--cinza-800);
     color: white;
     font-size: 15px;
     letter-spacing: 0.5px;
@@ -67,5 +67,20 @@
 }
 
 .section-create form button:hover {
-    background-color: var(--verde-principal);
+    background-color: var(--cinza-850);
+}
+
+.section-create form span {
+    font-size: 13px;
+    color: var(--cinza-150);
+    margin: 0 auto 60px;
+}
+
+.section-create form span a {
+    color: var(--cinza-50);
+    transition: all 0.3s ease;
+}
+
+.section-create form span a:hover {
+    color: white;
 }

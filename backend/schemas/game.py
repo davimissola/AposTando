@@ -12,6 +12,7 @@ class GameCreate(BaseGame):
 
 
 class GamePublic(BaseGame):
+    id: int
     total: float
     total_red: float
     total_blue: float

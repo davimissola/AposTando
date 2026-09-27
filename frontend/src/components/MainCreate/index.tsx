@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './main-create.css'
 import type { UserPublic, ApiError } from '../../types'
 
@@ -59,6 +59,7 @@ export function MainCreate() {
                     <input type='password' id='con-pwd' name='con-pwd' placeholder='Password' required />
                 </div>
                 <button>Criar Conta</button>
+                <span>Já tem uma conta? <Link to="/auth/login">Faça login</Link></span>
             </form>
         </section>
     )
