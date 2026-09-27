@@ -5,10 +5,11 @@
   <h1 align="center">AposTando</h1>
 
   <p align="center">
-    Sistema de <strong>apostas fictícias</strong> entre Azul e Vermelho.
+    Sistema de apostas fictícias.
   </p>
 
-  <!-- COLE AQUI A IMAGEM PRINCIPAL DO PROJETO -->
+  <img width="1920" height="1080" alt="main-image" src="https://github.com/user-attachments/assets/7e435eb6-8f20-4f79-97b0-609b86c7e16f" />
+
 
   <br />
   <br />
@@ -28,14 +29,11 @@ A aplicação possui autenticação utilizando JWT, proteção das rotas da API,
 
 Todo o dinheiro utilizado pelo AposTando é virtual. O projeto não utiliza dinheiro real e foi desenvolvido exclusivamente para estudo e prática de desenvolvimento Full Stack.
 
-<br /><br /><br />
+<br /><br />
 
 
 
 ### Tecnologias
-
-#### Backend
-
 * [![Python][Python]][Python-url]
 * [![FastAPI][FastAPI]][FastAPI-url]
 * [![SQLModel][SQLModel]][SQLModel-url]
@@ -45,7 +43,8 @@ Todo o dinheiro utilizado pelo AposTando é virtual. O projeto não utiliza dinh
 * [![TypeScript][TypeScript]][TypeScript-url]
 * [![CSS][CSS]][CSS-url]
 
-<br /><br /><br />
+<br /><br />
+
 
 
 
@@ -67,10 +66,21 @@ Todo o dinheiro utilizado pelo AposTando é virtual. O projeto não utiliza dinh
 - **Rotas protegidas:** funcionalidades de jogos e apostas exigem que o usuário esteja autenticado.
 
 <p align="right"><a href="#readme-top">volte ao topo</a></p>
+<br /><br />
 
 
 
-<!-- Imagens -->
+### Imagens
+<div align="center">
+  <img width="1920" height="1080" alt="main-image" src="https://github.com/user-attachments/assets/7e435eb6-8f20-4f79-97b0-609b86c7e16f" />
+
+  <img width="1920" height="1080" alt="footer-image" src="https://github.com/user-attachments/assets/11451677-5f57-461e-a311-be5c15245ae0" />
+
+  <img width="1920" height="1080" alt="apostar-image" src="https://github.com/user-attachments/assets/f9a21951-8e52-4833-8217-311d609751db" />
+
+  <img width="1920" height="1080" alt="create-image" src="https://github.com/user-attachments/assets/6fb8ebbf-bcd0-431d-a199-a86cedaf1887" />
+</div>
+
 
 
 <p align="right"><a href="#readme-top">volte ao topo</a></p>
