@@ -9,6 +9,8 @@ export function Aposta() {
     const token = localStorage.getItem('access_token')
     const navigate = useNavigate()
     const [currentUser, setCurrentUser] = useState<UserPublic | null>(null)
+    const [dialogFechada, setDialogFechada] = useState<boolean>(false)
+
 
     useEffect(() => {
         async function getAposta() {
@@ -29,8 +31,8 @@ export function Aposta() {
     return (
         <>  
             <Header />
-            <DialogAposta currentUser={currentUser}/>
-            <MainAposta />
+            <DialogAposta currentUser={currentUser} setDialogFechada={setDialogFechada}/>
+            <MainAposta dialogFechada={dialogFechada} setDialogFechada={setDialogFechada}/>
         </>
     )
 }

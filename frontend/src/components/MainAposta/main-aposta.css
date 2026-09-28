@@ -1,10 +1,6 @@
 .section-main-aposta {
     width: 100vw;
     height: 100vh;
-    background:
-        linear-gradient(to bottom, #5d5d64 0%, transparent 20%),
-        linear-gradient(#00000035, #00000035),
-        url('../../assets/jogo-padrao.png');
     background-position: center;
     background-size: cover;
     display: flex;

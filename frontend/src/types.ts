@@ -42,4 +42,10 @@ export type PropsViewsGame = {
 
 export type PropsDialogAposta = {
     currentUser: UserPublic | null
+    setDialogFechada: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export type PropsMainAposta = {
+    dialogFechada: boolean
+    setDialogFechada: React.Dispatch<React.SetStateAction<boolean>>
 }

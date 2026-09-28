@@ -6,7 +6,7 @@ import type { PropsDialogAposta, ApiError, BetPublic } from '../../types'
 
 
 
-export function DialogAposta({currentUser} : PropsDialogAposta) {
+export function DialogAposta({currentUser, setDialogFechada} : PropsDialogAposta) {
     const dialogRef = useRef<HTMLDialogElement | null>(null)
     const token = localStorage.getItem('access_token')
     const { id } = useParams()
@@ -44,6 +44,7 @@ export function DialogAposta({currentUser} : PropsDialogAposta) {
         }
         const dados: BetPublic = await response.json()
         dialogRef.current?.close()
+        setDialogFechada(true)
         return dados
     }
     return (
