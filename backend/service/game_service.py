@@ -58,7 +58,6 @@ def start_game_db(id_game: int, session: Session):
     if not game.aberto:
         raise Exception('Jogo não está aberto.')
 
-    # sortear entre BLUE or RED
     indice_vencedor = random.randint(0, 1)
     vencedor = OPCAO_BET[indice_vencedor]
     try:

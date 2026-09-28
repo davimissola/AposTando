@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Depends
 from fastapi.security import OAuth2PasswordRequestForm
 from schemas.auth import UserCreate, UserPublic
-from dependencies import SessionDep, get_current_user
+from dependencies import SessionDep
 from service.auth_service import create_user, get_user, create_acess_token
 from typing import Annotated
 
