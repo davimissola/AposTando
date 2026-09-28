@@ -66,7 +66,7 @@ def start_game_db(id_game: int, session: Session):
         bets: list[Bet] | None = session.exec(select(Bet).where(Bet.id_game == id_game, Bet.opcao_escolhida == vencedor)).all()
         for bet in bets:
             user: User = session.exec(select(User).where(User.id == bet.id_user)).first()
-            user.saldo += (bet.valor ** 2)
+            user.saldo += bet.valor * 2
             
         session.commit()
         return vencedor
